@@ -21,7 +21,7 @@ self.initPyodide = async function () {
         with open("requirements.txt", "r") as f:
             deps = [line.rstrip() for line in f]
             print("Loading requirements.txt:", deps)
-            await micropip.install(deps, pre=${pre}, keep_going=True)
+            await micropip.install(deps, pre=${pre})
   `);
     pyodide.pyimport(self.pythonModuleName);
     await self.flet_js.start_connection(self.receiveCallback);
