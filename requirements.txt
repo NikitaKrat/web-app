@@ -1,1 +1,2 @@
+wheel
 flet-pyodide
