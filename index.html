@@ -16,7 +16,7 @@
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png" />
-
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
   <!-- Flet specific -->
   <meta name="flet-route-url-strategy" content="hash">
   <meta name="flet-web-pyodide" content="true">
@@ -108,6 +108,9 @@
     <img src="icons/loading-animation.png" alt="Loading..." />
   </div>
   <script>
+    let tg = window.Telegram.WebApp;
+    tg.expand()
+
     window.addEventListener('load', function () {
       var loading = document.querySelector('#loading');
       _flutter.loader.loadEntrypoint({
