@@ -107,10 +107,24 @@
     </style>
     <img src="icons/loading-animation.png" alt="Loading..." />
   </div>
-  <script>
-    let tg = window.Telegram.WebApp;
-    tg.expand()
 
+  <h1>WEB APP</h1>
+
+    <button onclick="showTgValue()">Show tg Value</button>
+    <p id="tgValue"></p>
+
+    <script>
+        let tg = window.Telegram.WebApp;
+        tg.expand();
+
+        function showTgValue() {
+            console.log(tg);
+            document.getElementById("tgValue").innerText = "tg Value: " + tg;
+        }
+
+    </script>
+
+  <script>
     window.addEventListener('load', function () {
       var loading = document.querySelector('#loading');
       _flutter.loader.loadEntrypoint({
