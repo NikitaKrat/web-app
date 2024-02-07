@@ -1,1 +1,1 @@
-pyodide
+flet-pyodide
