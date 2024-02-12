@@ -13,10 +13,11 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-title" content="Flet">
   <link rel="apple-touch-icon" href="icons/apple-touch-icon-192.png">
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png" />
-  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+
   <!-- Flet specific -->
   <meta name="flet-route-url-strategy" content="hash">
   <meta name="flet-web-pyodide" content="true">
@@ -108,17 +109,10 @@
     <img src="icons/loading-animation.png" alt="Loading..." />
   </div>
 
-  <h1>WEB APP</h1>
-
-    <p id="tgValue"></p>
-
-
-    <script>
-        let tg = window.Telegram.WebApp;
-        tg.expand();
-
-        document.getElementById("tgValue").innerText = "tg Value: " + tg.initData;
-    </script>
+  <script>
+    let tg = window.Telegram.WebApp;
+    tg.expand();
+  </script>
 
   <script>
     window.addEventListener('load', function () {
